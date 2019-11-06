@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>
+            XCode Report Page
+        </title>
+        <!-- <css src="XCode_ScheduledImport::css/color-select.css"/> -->
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <!-- <update handle="scheduledimport_logs_index"/> -->
+            <!-- <block class="Magento\Backend\Block\Template"  name="log" template="XCode_ScheduledImport::importLogTemplate.phtml" cacheable="false"/> -->
+            <uiComponent name="logButton"/>
+            <block class="XCode\ScheduledImport\Block\Adminhtml\DisplayBlock"  name="log" template="XCode_ScheduledImport::importLogTemplate.phtml" cacheable="false"/>
+        </referenceContainer>
+    </body>
+</page>

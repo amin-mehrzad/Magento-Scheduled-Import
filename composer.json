@@ -1,0 +1,20 @@
+{
+    "name": "xcode/scheduledimport",
+    "description": "Importing products data via Ftp or AJAX method.",
+    "require": {
+        "php": "7.0.2|7.0.4|~7.0.6|~7.1.0"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "XCode\\ScheduledImport\\": ""
+        }
+    }
+}

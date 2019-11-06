@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <scheduledImport_tab>
+            <scheduledImport_setting>
+                <scheduledImport_connection_type>FTP</scheduledImport_connection_type>
+                <scheduledImport_host>api.aspirevapeco.com</scheduledImport_host>
+                <scheduledImport_file_name>inventory.csv</scheduledImport_file_name>
+                <scheduledImport_time_interval>5</scheduledImport_time_interval>
+                <scheduledImport_sku_field>1</scheduledImport_sku_field>
+                <scheduledImport_qty_field>6</scheduledImport_qty_field>
+                <scheduledImport_msrp_field>7</scheduledImport_msrp_field>
+            </scheduledImport_setting>
+        </scheduledImport_tab>
+    </default>
+</config>

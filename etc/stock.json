@@ -1,0 +1,462 @@
+[
+    {
+      "ENTITYID": 19,
+      "SKU": "a-pknmt",
+      "NAME": "Aspire Premium Kit - Nautilus Mini Tank",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 38,
+      "PRICE": 38
+    },
+    {
+      "ENTITYID": 20,
+      "SKU": "a-pkav1t",
+      "NAME": "Aspire Platinum Kit - Atlantis V1 Tank",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 53,
+      "PRICE": 53
+    },
+    {
+      "ENTITYID": 21,
+      "SKU": "a-oktv2b",
+      "NAME": "Aspire Odyssey Kit - Triton V2 Brass",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 53,
+      "PRICE": 53
+    },
+    {
+      "ENTITYID": 22,
+      "SKU": "a-oktv2c",
+      "NAME": "Aspire Odyssey Kit - Triton V2 Chrome",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 53,
+      "PRICE": 53
+    },
+    {
+      "ENTITYID": 23,
+      "SKU": "a-oktv2s",
+      "NAME": "Aspire Odyssey Kit - Triton V2 Slate",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 53,
+      "PRICE": 53
+    },
+    {
+      "ENTITYID": 34,
+      "SKU": "a-omkt2mts",
+      "NAME": "Aspire Odyssey Mini Kit - Triton 2 Mini Tank - Silver",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 41,
+      "PRICE": 41
+    },
+    {
+      "ENTITYID": 35,
+      "SKU": "a-omkt2mtb",
+      "NAME": "Aspire Odyssey Mini Kit - Triton 2 Mini Tank - Black",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 42,
+      "PRICE": 42
+    },
+    {
+      "ENTITYID": 36,
+      "SKU": "a-omkt2mtg",
+      "NAME": "Aspire Odyssey Mini Kit - Triton 2 Mini Tank - Gold",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 45,
+      "PRICE": 45
+    },
+    {
+      "ENTITYID": 38,
+      "SKU": 201,
+      "NAME": "Aspire Starter Kit - K1 Tank",
+      "STATUS": 1,
+      "QTY": 26,
+      "MSRP": 40,
+      "MSWP": 28,
+      "PRICE": 25.5
+    },
+    {
+      "ENTITYID": 39,
+      "SKU": 305,
+      "NAME": "Aspire Nautilus Tank Clearomizer",
+      "STATUS": 1,
+      "QTY": 237,
+      "MSRP": 24.99,
+      "MSWP": 17.6,
+      "PRICE": 15.95
+    },
+    {
+      "ENTITYID": 40,
+      "SKU": 306,
+      "NAME": "Aspire Nautilus Mini Tank",
+      "STATUS": 1,
+      "QTY": 184,
+      "MSRP": 24.99,
+      "MSWP": 17.6,
+      "PRICE": 15.95
+    },
+    {
+      "ENTITYID": 41,
+      "SKU": 327,
+      "NAME": "Aspire Atlantis Tank V2",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 26,
+      "MSWP": 18,
+      "PRICE": 16.5
+    },
+    {
+      "ENTITYID": 42,
+      "SKU": "a-tt",
+      "NAME": "Aspire Triton Tank",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 19,
+      "PRICE": 19
+    },
+    {
+      "ENTITYID": 43,
+      "SKU": 307,
+      "NAME": "Aspire Triton 2 Tank",
+      "STATUS": 1,
+      "QTY": 12,
+      "MSRP": 29,
+      "MSWP": 20,
+      "PRICE": 18.5
+    },
+    {
+      "ENTITYID": 44,
+      "SKU": 313,
+      "NAME": "Aspire Cleito Tank - Black",
+      "STATUS": 1,
+      "QTY": 486,
+      "MSRP": 21,
+      "MSWP": 14,
+      "PRICE": 12.5
+    },
+    {
+      "ENTITYID": 45,
+      "SKU": 312,
+      "NAME": "Aspire Cleito Tank - Stainless Steel",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 19,
+      "MSWP": 13,
+      "PRICE": 11.5
+    },
+    {
+      "ENTITYID": 49,
+      "SKU": "a-pmm-silver",
+      "NAME": "Aspire Pegasus Mini - Silver",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 0,
+      "PRICE": 0
+    },
+    {
+      "ENTITYID": 50,
+      "SKU": "a-pmm-gold",
+      "NAME": "Aspire Pegasus Mini - Gold",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 0,
+      "PRICE": 0
+    },
+    {
+      "ENTITYID": 52,
+      "SKU": 505,
+      "NAME": "Aspire Nautilus Mini BVC Coils - 1.6 ohm (3.3-5.0V)",
+      "STATUS": 1,
+      "QTY": 1000,
+      "MSRP": 12.99,
+      "MSWP": 8.25,
+      "PRICE": 6.6
+    },
+    {
+      "ENTITYID": 53,
+      "SKU": 506,
+      "NAME": "Aspire Nautilus Mini BVC Coils - 1.8 ohm (3.3-6.0V)",
+      "STATUS": 1,
+      "QTY": 1000,
+      "MSRP": 12.99,
+      "MSWP": 8.25,
+      "PRICE": 6.6
+    },
+    {
+      "ENTITYID": 55,
+      "SKU": 531,
+      "NAME": "Aspire Atlantis V2 Coils - 0.3 ohm (70-80W)",
+      "STATUS": 1,
+      "QTY": 189,
+      "MSRP": 16.49,
+      "MSWP": 11,
+      "PRICE": 8.8
+    },
+    {
+      "ENTITYID": 56,
+      "SKU": 532,
+      "NAME": "Aspire Atlantis V2 Coils - 0.5 ohm (20-30W)",
+      "STATUS": 1,
+      "QTY": 501,
+      "MSRP": 16.49,
+      "MSWP": 11,
+      "PRICE": 8.8
+    },
+    {
+      "ENTITYID": 58,
+      "SKU": 523,
+      "NAME": "Aspire Triton Coils 0.3 ohm (45-55W)",
+      "STATUS": 1,
+      "QTY": 33,
+      "MSRP": 15,
+      "MSWP": 10,
+      "PRICE": 8
+    },
+    {
+      "ENTITYID": 59,
+      "SKU": 524,
+      "NAME": "Aspire Triton Coils 0.4 ohm (25-30W)",
+      "STATUS": 1,
+      "QTY": 173,
+      "MSRP": 15,
+      "MSWP": 10,
+      "PRICE": 8
+    },
+    {
+      "ENTITYID": 60,
+      "SKU": 525,
+      "NAME": "Aspire Triton Coils 0.5 ohm Clapton (40-45W)",
+      "STATUS": 1,
+      "QTY": 197,
+      "MSRP": 16.49,
+      "MSWP": 11,
+      "PRICE": 8.8
+    },
+    {
+      "ENTITYID": 61,
+      "SKU": 526,
+      "NAME": "Aspire Triton Coils 1.8 ohm Kanthal (10-13W)",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 16.49,
+      "MSWP": 11,
+      "PRICE": 8.8
+    },
+    {
+      "ENTITYID": 63,
+      "SKU": 527,
+      "NAME": "Aspire Triton Mini Coil NI200 0.15ohm Temperature Control",
+      "STATUS": 1,
+      "QTY": 154,
+      "MSRP": 11.99,
+      "MSWP": 8.25,
+      "PRICE": 6.6
+    },
+    {
+      "ENTITYID": 64,
+      "SKU": 528,
+      "NAME": "Aspire Triton Mini Coil 1.2ohm Kanthal Coil",
+      "STATUS": 1,
+      "QTY": 672,
+      "MSRP": 11.99,
+      "MSWP": 8.25,
+      "PRICE": 6.6
+    },
+    {
+      "ENTITYID": 65,
+      "SKU": 529,
+      "NAME": "Aspire Triton Mini Coil 1.8ohm Clapton Coil",
+      "STATUS": 1,
+      "QTY": 498,
+      "MSRP": 12.99,
+      "MSWP": 9,
+      "PRICE": 7.5
+    },
+    {
+      "ENTITYID": 67,
+      "SKU": 217,
+      "NAME": "Proteus Hookah Head (10 ml)",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 59.99,
+      "MSWP": 38,
+      "PRICE": 34.5
+    },
+    {
+      "ENTITYID": 68,
+      "SKU": 535,
+      "NAME": "Aspire Proteus Coil (0.25ohm)",
+      "STATUS": 1,
+      "QTY": 38,
+      "MSRP": 4.49,
+      "MSWP": 2.5,
+      "PRICE": 2.5
+    },
+    {
+      "ENTITYID": 69,
+      "SKU": 208,
+      "NAME": "Aspire K2 Kit - Black",
+      "STATUS": 1,
+      "QTY": 189,
+      "MSRP": 34.99,
+      "MSWP": 22.5,
+      "PRICE": 21.25
+    },
+    {
+      "ENTITYID": 70,
+      "SKU": 206,
+      "NAME": "Aspire K3 Kit - Black",
+      "STATUS": 1,
+      "QTY": 150,
+      "MSRP": 37.49,
+      "MSWP": 25,
+      "PRICE": 23.75
+    },
+    {
+      "ENTITYID": 71,
+      "SKU": 204,
+      "NAME": "Aspire K4 Kit - Black",
+      "STATUS": 1,
+      "QTY": 73,
+      "MSRP": 49.99,
+      "MSWP": 32.5,
+      "PRICE": 31.25
+    },
+    {
+      "ENTITYID": 72,
+      "SKU": 202,
+      "NAME": "Aspire Plato All in One Kit - Black",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": 55,
+      "MSWP": 40,
+      "PRICE": 36
+    },
+    {
+      "ENTITYID": 84,
+      "SKU": 801,
+      "NAME": "Aspire Glass Hookah - GH1",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 129.99,
+      "MSWP": 65,
+      "PRICE": 65
+    },
+    {
+      "ENTITYID": 85,
+      "SKU": 802,
+      "NAME": "Aspire Glass Hookah - GH2",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 129.99,
+      "MSWP": 65,
+      "PRICE": 65
+    },
+    {
+      "ENTITYID": 86,
+      "SKU": 803,
+      "NAME": "Aspire Glass Hookah - GH3",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 129.99,
+      "MSWP": 65,
+      "PRICE": 65
+    },
+    {
+      "ENTITYID": 87,
+      "SKU": 804,
+      "NAME": "Aspire Glass Hookah - GH4",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 129.99,
+      "MSWP": 65,
+      "PRICE": 65
+    },
+    {
+      "ENTITYID": 88,
+      "SKU": 805,
+      "NAME": "Aspire Glass Hookah - GH5",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 129.99,
+      "MSWP": 65,
+      "PRICE": 65
+    },
+    {
+      "ENTITYID": 89,
+      "SKU": 806,
+      "NAME": "Aspire Glass Hookah - GH6",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 129.99,
+      "MSWP": 65,
+      "PRICE": 65
+    },
+    {
+      "ENTITYID": 95,
+      "SKU": 308,
+      "NAME": "Aspire Nautilus X Tank - Stainless Steel",
+      "STATUS": 1,
+      "QTY": 7,
+      "MSRP": 27.49,
+      "MSWP": 18.5,
+      "PRICE": 17
+    },
+    {
+      "ENTITYID": 96,
+      "SKU": 309,
+      "NAME": "Aspire Nautilus X Tank- Black",
+      "STATUS": 1,
+      "QTY": 50,
+      "MSRP": 27.99,
+      "MSWP": 19,
+      "PRICE": 17.5
+    },
+    {
+      "ENTITYID": 97,
+      "SKU": 310,
+      "NAME": "Aspire Nautilus X Tank - Gold",
+      "STATUS": 1,
+      "QTY": 77,
+      "MSRP": 27.99,
+      "MSWP": 19,
+      "PRICE": 17.5
+    },
+    {
+      "ENTITYID": 98,
+      "SKU": 311,
+      "NAME": "Aspire Nautilus X Tank - Limited Edition (Rainbow)",
+      "STATUS": 2,
+      "QTY": 0,
+      "MSRP": "",
+      "MSWP": 19,
+      "PRICE": 19
+    },
+    {
+      "ENTITYID": 100,
+      "SKU": 508,
+      "NAME": "Aspire Nautilus X Coils 1.8 ohm",
+      "STATUS": 1,
+      "QTY": 0,
+      "MSRP": 15.99,
+      "MSWP": 9.9,
+      "PRICE": 8.25
+    }
+  ]

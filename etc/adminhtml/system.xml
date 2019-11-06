@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="XCode" translate="label" sortOrder="180">
+            <label>XCode</label>
+            <!--<resource>XCode_ScheduledImport::XCode_configuration</resource>-->
+        </tab>
+        <section id="scheduledImport_tab" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Scheduled Import</label>
+            <tab>XCode</tab>
+            <resource>XCode_ScheduledImport::scheduledImport_configuration</resource>
+            <group id="scheduledImport_setting" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Scheduled Import Settings</label>
+                <field id="scheduledImport_connection_type" translate="label comment" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Connection Type</label>
+                    <source_model>XCode\ScheduledImport\Model\ConnectionTypeDropdown</source_model>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="scheduledImport_json_url" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>JSON URL</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="*/*/scheduledImport_connection_type">1</field>
+                    </depends>
+                    <comment></comment>
+                </field>
+                <field id="scheduledImport_host" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>FTP Host Name</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="*/*/scheduledImport_connection_type">0</field>
+                    </depends>
+                    <comment></comment>
+                </field>
+                <field id="scheduledImport_username" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>FTP Username</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="*/*/scheduledImport_connection_type">0</field>
+                    </depends>
+                    <comment></comment>
+                 </field>
+                <field id="scheduledImport_Password" translate="label comment" type="password" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>FTP Password</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="*/*/scheduledImport_connection_type">0</field>
+                    </depends>
+                    <comment></comment>
+                </field>
+                <field id="scheduledImport_file_name" translate="label comment" type="text" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>File Name</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="*/*/scheduledImport_connection_type">0</field>
+                    </depends>
+                </field>
+                <field id="scheduledImport_time_interval" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Time Interval</label>
+                    <source_model>XCode\ScheduledImport\Model\IntervalDropdown</source_model>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="scheduledImport_sku_field" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>SKU Field</label>
+                    <source_model>XCode\ScheduledImport\Model\FieldDropdown</source_model>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="scheduledImport_qty_field" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Quantity Field</label>
+                    <source_model>XCode\ScheduledImport\Model\FieldDropdown</source_model>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="scheduledImport_msrp_field" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>MSRP Field</label>
+                    <source_model>XCode\ScheduledImport\Model\FieldDropdown</source_model>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="scheduledImport_custom_mapping" translate="label comment" type="textarea" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Mapping</label>
+                    <comment></comment>
+                </field>                
+                <field id="scheduledImport_active_debug" translate="label comment" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Active Debug Mode</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment></comment>
+                </field>
+                <field id="scheduledImport_log_file_path" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Log File Path</label>
+                    <validate>required-entry</validate>
+                    <comment></comment>
+                    <depends>
+                        <field id="*/*/scheduledImport_active_debug">1</field>
+                    </depends>
+                </field>  
+            </group>
+        </section>
+    </system>
+</config>

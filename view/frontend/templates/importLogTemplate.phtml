@@ -1,0 +1,55 @@
+
+<form method="post" class="importForm">
+    <input type="submit" name="read"  value="Read Last Importing Log"  class="importButton importButton3"/>
+    <input type="submit" name="run"   value="Run New Importing"  class="importButton importButton1"/>
+</form>
+
+    <div>
+        <span><?php if(isset($_POST['read'])){ echo $block->getContents();} ?></span>   
+    </div>
+    <div>
+<span><?php if(isset($_POST['run'])){ $block->importingManually();/*echo $block->getContents();*/} ?></span>   
+    </div>
+
+<style>
+.importForm {
+    display:flex;
+    justify-content: center;
+}
+.importButton {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.importButton1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.importButton1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.importButton3 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.importButton3:hover {
+  background-color: #f44336;
+  color: white;
+}
+</style>
