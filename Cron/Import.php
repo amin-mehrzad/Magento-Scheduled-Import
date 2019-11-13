@@ -6,14 +6,13 @@ use Magento\CatalogInventory\Model\Stock\StockItemRepository as StockItem;
 use Magento\Catalog\Model\Product as Product;
 use Magento\Catalog\Model\ProductFactory as ProductFactory;
 use Magento\Catalog\Model\ResourceModel\Product\Action as Action;
+use Magento\InventorySalesAdminUi\Model\GetSalableQuantityDataBySku;
 use XCode\ScheduledImport\Helper\Data;
 use \Magento\Catalog\Api\ProductRepositoryInterface;
 use \Magento\Framework\App\Filesystem\DirectoryList;
 use \Magento\Framework\Filesystem\Driver\File;
 use \Magento\Framework\Filesystem\Io\Ftp;
 use \Magento\Framework\UrlInterface;
-use Magento\InventorySalesAdminUi\Model\GetSalableQuantityDataBySku;
-
 
 class Import extends \Magento\Framework\App\Action\Action
 {
@@ -31,7 +30,7 @@ class Import extends \Magento\Framework\App\Action\Action
 
     public function __construct(
         \Magento\Framework\App\Action\Context $context,
-		\Magento\Catalog\Api\ProductRepositoryInterface $ProductRepository,
+        \Magento\Catalog\Api\ProductRepositoryInterface $ProductRepository,
         Data $helper,
         StockItem $stockItem,
         Product $product,
@@ -48,10 +47,9 @@ class Import extends \Magento\Framework\App\Action\Action
         \Magento\Store\Model\StoreManagerInterface $StoreManager,
         GetSalableQuantityDataBySku $getSalableQuantityDataBySku
 
-
     ) {
         $this->helper = $helper;
-		$this->ProductRepository = $ProductRepository;
+        $this->ProductRepository = $ProductRepository;
         $this->stockItem = $stockItem;
         $this->product = $product;
         $this->_moduleReader = $moduleReader;
@@ -134,7 +132,7 @@ class Import extends \Magento\Framework\App\Action\Action
                     $fileWeight = $fileData[$i][$weightField];
                     // $setResults = $this->setEverything($fileSku, $fileQty, $fileMsrp);
 
-                   // $logger->alert('...................');
+                    // $logger->alert('...................');
 
                     $response = array(
                         "status" => "skipped",
@@ -147,7 +145,7 @@ class Import extends \Magento\Framework\App\Action\Action
                         "old_isinstock" => "unchanged",
                         "new_isinstock" => "unchanged",
                         "old_weight" => $fileWeight,
-                        "new_weight" => $fileWeight
+                        "new_weight" => $fileWeight,
                     );
 
                     try {
@@ -158,27 +156,27 @@ class Import extends \Magento\Framework\App\Action\Action
                     if (!$stockItem) {
                         $response["status"] = "missing_sku";
                         $response["message"] = "Product with the sku $fileSku does not exist";
-						//return $response;
-						$setResults = $response;
-						$logger->info($setResults["message"] . '.');
-						continue;
+                        //return $response;
+                        $setResults = $response;
+                        $logger->info($setResults["message"] . '.');
+                        continue;
                     }
                     //get old_qty and stock status
                     $response["old_qty"] = $stockItem->getQty();
                     $response["old_isinstock"] = $stockItem->getIsInStock();
 
                     $saleableQty = $response["old_qty"];
-                    if(!empty($this->getSalableQuantityDataBySku->execute($fileSku))){
+                    if (!empty($this->getSalableQuantityDataBySku->execute($fileSku))) {
 
-                    $saleableQty = $this->getSalableQuantityDataBySku->execute($fileSku)[0]["qty"];
-                } else {
-			
-                }
+                        $saleableQty = $this->getSalableQuantityDataBySku->execute($fileSku)[0]["qty"];
+                    } else {
+
+                    }
                     $reservation = $response["old_qty"] - $saleableQty;
-                    
-                    $xQty = $response["old_qty"] - $saleableQty ;
-                    
-                    if($fileQty < $xQty || true){
+
+                    $xQty = $response["old_qty"] - $saleableQty;
+
+                    if ($fileQty < $xQty || true) {
                         $fileQty = $fileQty + $xQty;
                     }
 
@@ -204,7 +202,7 @@ class Import extends \Magento\Framework\App\Action\Action
                         }
                     }
 
-                   // $setAttributeResults = $this->setSingleAttributeBySku($fileSku, 'msrp', $fileMsrp);
+                    // $setAttributeResults = $this->setSingleAttributeBySku($fileSku, 'msrp', $fileMsrp);
                     //print_r($setAttributeResults);
 
                     $responseX = array(
@@ -231,9 +229,7 @@ class Import extends \Magento\Framework\App\Action\Action
                         }
                     }
 
-
-					$setAttributeResults = $responseX;
-
+                    $setAttributeResults = $responseX;
 
                     $response["old_msrp"] = $setAttributeResults["old_value"];
                     $response["new_msrp"] = $setAttributeResults["new_value"];
@@ -243,16 +239,53 @@ class Import extends \Magento\Framework\App\Action\Action
                         if ($response["status"] != "error") {
                             $response["status"] = "success";
                         }
+                        $setResults = $response;
+                        $logger->info($setResults["message"] . '.');
                     }
 
-                    $setResults = $response;
-                    $logger->info($setResults["message"] . '.');
+                    $responseXX = array(
+                        "status" => "skipped",
+                        "attribute" => 'weight',
+                        "message" => "Value did not change, no need to update",
+                        "old_value" => $fileWeight,
+                        "new_value" => $fileWeight,
+                    );
+
+                    try {
+                        $productRep = $this->ProductRepository->get($fileSku);
+                    } catch (\Magento\Framework\Exception\NoSuchEntityException $e) {
+                        $productRep = false;
+                    }
+                    if ($productRep) {
+                        $responseXX["old_value"] = floatval($productRep->getData('weight'));
+                        $responseXX["new_value"] = floatval($fileWeight);
+                        if ($responseXX["old_value"] != $responseXX["new_value"]) {
+                            $storeId = $this->StoreManager->getStore()->getId();
+                            $this->Action->updateAttributes([$productRep->getId()], ['weight' => $responseX["new_value"]], $storeId);
+                            $responseXX["new_value"] = floatval($fileWeight);
+                            $responseXX["status"] = "success";
+                        }
+                    }
+
+                    $setAttributeResultsXX = $responseXX;
+
+                    $response["old_weight"] = $setAttributeResultsXX["old_value"];
+                    $response["new_new"] = $setAttributeResultsXX["new_value"];
+
+                    if ($setAttributeResultsXX["status"] == "success") {
+                        $response["message"] .= " Updated msrp from {$response["old_weight"]} to {$response["new_weight"]}";
+                        if ($response["status"] != "error") {
+                            $response["status"] = "success";
+                        }
+                        $setResults = $response;
+                        $logger->info($setResults["message"] . '.');
+                    }
                 }
+
             }
-			$this->_file->deleteFile($tempFile);
+            $this->_file->deleteFile($tempFile);
         }
 
     }
-  
-    
+
 }
